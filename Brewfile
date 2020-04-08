@@ -38,7 +38,7 @@ brew 'imagemagick'
 brew 'mysql'
 brew 'nginx'
 brew 'node'
-brew 'fnm'
+brew 'Schniz/tap/fnm'
 brew 'redis'
 brew 'yarn'
 
