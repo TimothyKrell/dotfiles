@@ -30,6 +30,9 @@ $HOME/.composer/vendor/bin/valet install
 # This is a default directory for macOS user accounts but doesn't comes pre-installed
 mkdir $HOME/Sites
 
+# Install global NPM dependencies
+./npm.sh
+
 # Clone Github repositories
 ./clone.sh
 
