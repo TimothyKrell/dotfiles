@@ -11,15 +11,20 @@ export ZSH=$HOME/.oh-my-zsh
 autoload -Uz compinit && compinit
 
 # Minimal - Theme Settings
-export MNML_INSERT_CHAR="$"
-export MNML_PROMPT=(mnml_git mnml_keymap)
-export MNML_RPROMPT=('mnml_cwd 20')
+#export MNML_INSERT_CHAR="$"
+#export MNML_PROMPT=(mnml_git mnml_keymap)
+#export MNML_RPROMPT=('mnml_cwd 20')
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="minimal"
+ZSH_THEME="afowler"
+
+# 10ms for key sequences
+# prevents long key delays
+# https://www.johnhawthorn.com/2012/09/vi-escape-delays/
+KEYTIMEOUT=1
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -79,17 +84,40 @@ ZSH_CUSTOM=$DOTFILES
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# import iterm2 shell integration
+source ~/.iterm2_shell_integration.`basename $SHELL`
+
 # export MANPATH="/usr/local/man:$MANPATH"
+
+export ANDROID_HOME=${HOME}/Library/Android/sdk
 
 # You may need to manually set your language environment
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# needed to install psycopg2
+export LDFLAGS=-L/usr/local/opt/openssl/lib
+export CPPFLAGS=-I/usr/local/opt/openssl/include
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/tkrell/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/tkrell/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/tkrell/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/tkrell/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# fnm
+eval "$(fnm env --multi)"
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
