@@ -2,8 +2,7 @@
 
 echo "Cloning repositories..."
 
-SITES=$HOME/Sites
-LARAVEL=$SITES/laravel
+CODE=$HOME/Code
 
 # Personal
-# git clone git@github.com:driesvints/cashier-paddle.git $SITES/cashier-paddle
+# git clone git@github.com:driesvints/cashier-paddle.git $CODE/cashier-paddle
