@@ -1,4 +1,5 @@
 # Taps
+#
 tap 'homebrew/cask'
 tap 'homebrew/cask-eid'
 tap 'homebrew/cask-fonts'
@@ -22,6 +23,7 @@ brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'neovim'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
+brew 'reattach-to-user-namespace'
 brew 'the_silver_searcher'
 brew 'tmux'
 brew 'trash' # Manage the Trash bin
@@ -38,6 +40,7 @@ brew 'imagemagick'
 brew 'mysql'
 brew 'nginx'
 brew 'node'
+brew 'python'
 brew 'Schniz/tap/fnm'
 brew 'redis'
 brew 'yarn'
@@ -57,6 +60,7 @@ cask 'imageoptim'
 cask 'insomnia'
 cask 'java'
 cask 'postico'
+cask 'react-native-debugger'
 cask 'screenflow'
 cask 'skype'
 cask 'slack'

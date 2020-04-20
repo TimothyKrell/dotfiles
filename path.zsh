@@ -21,3 +21,18 @@ export PATH="$HOME/.fastlane/bin:$PATH"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# Android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# Helper Hive
+export KEY_ALIAS=QHRoYi9oZWxwZXItaGl2ZQ== 
+export STORE_PASSWORD=8d30e048-9985-11e7-87c3-0a580a781a73 
+export KEY_PASSWORD=8d30e055-9985-11e7-87c3-0a580a781a73 
+export KEYSTORE_FILE=/Users/tkrell/.secrets/helper-hive.jks
+export EXPO_STAGE_PASSWORD=larineselfic
+export EXPO_PROD_PASSWORD=hambrinsiventali
+
