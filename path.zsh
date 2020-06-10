@@ -36,3 +36,9 @@ export KEYSTORE_FILE=/Users/tkrell/.secrets/helper-hive.jks
 export EXPO_STAGE_PASSWORD=larineselfic
 export EXPO_PROD_PASSWORD=hambrinsiventali
 
+# virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.7
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+
