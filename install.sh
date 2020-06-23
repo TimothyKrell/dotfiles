@@ -26,6 +26,10 @@ brew bundle
 # Install Laravel Valet
 #$HOME/.composer/vendor/bin/valet install
 
+# Install Vim Plug
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 # Create a Sites directory
 # This is a default directory for macOS user accounts but doesn't comes pre-installed
 mkdir $HOME/Code
